@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello - Your Personal Food Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="#" class="logo"><b><u>Taste Of Indian Seasons</u></b></a>
+            <ul class="nav-links">
+                <li><a href="#">Winter</a></li>
+                <li><a href="#">Summer</a></li>
+                <li><a href="#">Monsoon</a></li>
+                <li><a href="#">Festive</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search Any Season...">
+                </div>
+                <a href="#" class="profile-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content container">
+                <h1>Don't know what to cook?</h1>
+                <p>Tell us what's The Season. We'll find the dish.</p>
+                <div class="hero-search-form">
+                    <input type="text" id="searchbox" placeholder="Enter Season And Find Your Dish...">
+                    <button onclick="submit()">Find Dishes</button>
+                    <script>
+                        document.getElementById("searchbox").addEventListener("keypress", function (event) {
+                            if (event.key === "Enter") {
+                                event.preventDefault();
+                                submit();
+                            }
+                        });
+                        function submit() {
+                            let query = document.getElementById("searchbox").value.toLowerCase();
+                            let pages = {
+                                "winter": "winter.html",
+                                "summer": "summer.html",
+                                "monsoon": "monsoon.html",
+                                "festive": "festive.html"
+                            };
+                            if (pages[query]) {
+                                window.location.href = pages[query];
+                            }
+                            else {
+                                alert("Page not found! Try: winter,summer,monsoon,festive");
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+        <br><br><br><br><br><br>
+        <section>
+            <h1 style="text-align: center;">FOOD IS THE BEST WAY TO REMOVE YOUR STRESS</h1>
+        </section>
+    </main>
+    <br><br><br><br><br><br>
+    <footer>
+        <div class="footer-grid container">
+            <div class="footer-col">
+                <h4>Taste Of Indian Seasons</h4>
+                <p>Find the flavor in your kitchen.</p>
+                <p>&copy;<u> 2025 TOIS</u></p>
+            </div>
+    </footer>
+
+</body>
+
+</html>
