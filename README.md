@@ -1,1 +1,3 @@
-# Food-Recommendation-Website
+## Food Recommendation Website 
+
+The Food Recommendation Website is a user-friendly web application designed to help users discover food based on different seasons. The website provides recommendations for a variety of Indian foods, including popular dishes as well as lesser-known traditional foods. It helps users explore suitable food options throughout the year in a simple and organized way. The website was developed using HTML, CSS, and JavaScript, with a focus on creating an attractive and easy-to-navigate interface. HTML was used to structure the content, CSS was used to design and style the website, and JavaScript was used to add interactive functionality. Overall, the project provides an easy platform for users to explore and discover different Indian foods based on the time of year.
